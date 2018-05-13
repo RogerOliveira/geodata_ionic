@@ -1,3 +1,17 @@
 page-contact {
+    ion-card img {
+        display: block;
+        width: 10px;
+    }
+
+    .item-ios ion-thumbnail {
+        min-width: 33px;
+        min-height: 33px;
+    }
+
+    .item-ios ion-thumbnail ion-img, .item-ios ion-thumbnail img {
+        width: 30px;
+        height: 30px;
+    }
 
 }

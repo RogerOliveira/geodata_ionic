@@ -1,3 +1,27 @@
 page-home {
+    button.disable-hover.button.button-ios.button-outline.button-outline-ios {
+       width: 20em;
+       height: 3.5em;
+       border-radius: 1em;
+               
+    }
 
+    img {
+        /* position: sticky; */
+        /* align-items: center; */
+        padding-top: 5.5em;
+        width: 19em;
+        padding-left: 6em;
+    }
+
+    ion-navbar.toolbar.toolbar-ios {
+        background-color: rgb(65, 138, 197);
+    }
+
+    [col-xl-3] {
+        padding: 15px;
+        color: rgb(193, 193, 197);
+
+
+    }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AfricaSulPage } from '../africa-sul/africa-sul';
 
 @Component({
   selector: 'page-about',
@@ -9,6 +10,9 @@ export class AboutPage {
 
   constructor(public navCtrl: NavController) {
 
-  }
+  }  
 
+  goToAfricaSulPage (){
+    this.navCtrl.push(AfricaSulPage);
+    }
 }
