@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{pais.nome}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-bounce>
+  <ion-card>
+
+    <img src="../assets/imgs/{{pais.bandeira}}" width="60" >
+    <ion-fab right top>
+      <button ion-fab>
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-fab>
+    <br>
+    <ion-item>
+      <ion-icon name="ios-flag-outline" item-start large></ion-icon>
+      <h2>{{pais.nome}}</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="ios-pin-outline" item-left large></ion-icon>
+      <h2>{{pais.capital}}</h2>
+    </ion-item> 
+
+    <ion-item>
+      <ion-icon name="ios-people-outline" item-left large></ion-icon>
+      <h2>{{pais.populacao}}</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="ios-compass-outline" item-left large></ion-icon>
+      <h2>{{pais.continente}}</h2>
+    </ion-item>
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Paises</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-bounce>
+  <ion-header>
+  
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let pais of paises">
+        <ion-thumbnail item-start>
+          <img src="../assets/imgs/{{pais.icone}}">
+        </ion-thumbnail>
+        <h1>{{pais.nome}}</h1>
+        <h2>{{pais.continente}}</h2>       
+        <button ion-button clear item-end (click)="goToPais(pais)">+ detalhes</button>
+      </ion-item>
+    </ion-list>
+  </ion-content>

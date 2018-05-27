@@ -10,7 +10,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AfricaSulPage } from '../pages/africa-sul/africa-sul';
+import { PaisDetalhePage } from '../pages/pais-detalhe/pais-detalhe';
+import { PaisPageModule } from '../pages/pais/pais.module';
+import { PaisDetalhePageModule } from '../pages/pais-detalhe/pais-detalhe.module';
+import { PaisPage } from '../pages/pais/pais';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,13 @@ import { AfricaSulPage } from '../pages/africa-sul/africa-sul';
     TodosPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    AfricaSulPage
+    TabsPage
+  
   ],
   imports: [
     BrowserModule,
+    PaisPageModule,
+    PaisDetalhePageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -32,7 +37,8 @@ import { AfricaSulPage } from '../pages/africa-sul/africa-sul';
     ContactPage,
     HomePage,
     TabsPage,
-    AfricaSulPage
+    PaisPage,
+    PaisDetalhePage
   ],
   providers: [
     StatusBar,

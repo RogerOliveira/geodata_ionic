@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Continentes</ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,20 +9,20 @@
   <ion-col col-12>
     <ion-list>
         <ion-item>
-          <ion-label>Selecionar Continente</ion-label>
-          <ion-select [(ngModel)]="toppings"  cancelText="Cancelar" okText="OK">            
-            <ion-option value="africa">Africa</ion-option>
-            <ion-option value="americas">Americas</ion-option>
-            <ion-option value="asia">Asia</ion-option>
-            <ion-option value="europa">Europe</ion-option>
-            <ion-option value="oceania">Oceania</ion-option>            
+          <ion-label>Selecione o Continente</ion-label>
+          <ion-select [(ngModel)]="continente"  cancelText="Cancelar"  okText="OK">            
+            <ion-option [value]="Africa">Africa</ion-option>
+            <ion-option [value]="Americas">Americas</ion-option>
+            <ion-option [value]="Asia">Asia</ion-option>
+            <ion-option [value]="Europe">Europe</ion-option>
+            <ion-option [value]="Oceania">Oceania</ion-option>            
           </ion-select>
         </ion-item>
       </ion-list>
     </ion-col>    
 
     <ion-row>
-        <ion-col col-12><button ion-button outline value="botao_listar" class="botaoListar">LISTAR</button></ion-col>
+        <ion-col col-12><button ion-button outline  (click)="listarPaises()">LISTAR</button></ion-col>
       </ion-row>          
     </ion-grid>  
          

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
+import { PaisDetalhePage } from '../pais-detalhe/pais-detalhe';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  continente: any;
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
 
   }
 
+  listarPaises() {
+    this.navCtrl.push(PaisDetalhePage, { "continente": this.continente })
+    let loader = this.loadingCtrl.create({
+      content: "Carregando...",
+      duration: 700
+    });
+    loader.present();
+  }
 }
+
