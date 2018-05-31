@@ -17,7 +17,7 @@ export class HomePage {
     this.navCtrl.push(PaisDetalhePage, { "continente": this.continente })
     let loader = this.loadingCtrl.create({
       content: "Carregando...",
-      duration: 700
+      duration: 300
     });
     loader.present();
   }

@@ -1,8 +1,8 @@
 export class Pais{
-    bandeira: string;
     nome: string;
+    bandeira: string;
     capital: string;
-    regiao: string;
+    continente: string;
     populacao: string;
     icone: string;    
 }

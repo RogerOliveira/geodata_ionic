@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import {SQLite}	from '@ionic-native/sqlite';
 import { MyApp } from './app.component';
 
 import { TodosPage } from '../pages/todos/todos';
@@ -14,6 +15,8 @@ import { PaisDetalhePage } from '../pages/pais-detalhe/pais-detalhe';
 import { PaisPageModule } from '../pages/pais/pais.module';
 import { PaisDetalhePageModule } from '../pages/pais-detalhe/pais-detalhe.module';
 import { PaisPage } from '../pages/pais/pais';
+import { DatabaseProvider } from '../providers/database/database';
+import { PaisProvider } from '../providers/pais/pais';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { PaisPage } from '../pages/pais/pais';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SQLite,
+    DatabaseProvider,
+    PaisProvider
   ]
 })
 export class AppModule {}
